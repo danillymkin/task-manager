@@ -11,10 +11,11 @@ import { ConfigService } from '@nestjs/config';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  const globalPrefix = 'api';
-  app.setGlobalPrefix(globalPrefix);
 
   const config = app.get(ConfigService);
+
+  const globalPrefix = config.get<string>('API_PREFIX');
+  app.setGlobalPrefix(globalPrefix);
 
   const port = config.get<number>('API_PORT') || 3333;
   await app.listen(port);
