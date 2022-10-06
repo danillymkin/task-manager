@@ -3,6 +3,9 @@
 # environments
 *.env
 
+# database
+/pgdata
+
 # compiled output
 /dist
 /tmp

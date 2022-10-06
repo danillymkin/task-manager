@@ -5,6 +5,7 @@
   "scripts": {
     "start:all": "nx run-many --parallel --target=serve --projects=backend,frontend",
     "start": "nx serve",
+    "start:db": "docker-compose up -d",
     "build": "nx build",
     "test": "nx test"
   },
