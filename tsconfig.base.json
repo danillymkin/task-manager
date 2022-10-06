@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@task-manager/core": ["libs/core/src/index.ts"]
+      "@task-manager/core": ["libs/core/src/index.ts"],
+      "@task-manager/prisma": ["libs/prisma/src/index.ts"],
+      "@task-manager/user": ["libs/user/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
