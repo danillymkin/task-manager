@@ -20,7 +20,7 @@ export class GqlConfigService implements GqlOptionsFactory {
       sortSchema: true,
       path,
       resolvers: {
-        DateTime: GraphQLDateTime
+        DateTime: GraphQLDateTime,
       },
       subscriptions: {
         'graphql-ws': true,
