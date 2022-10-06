@@ -3,6 +3,7 @@ import { ApolloDriverConfig } from '@nestjs/apollo';
 import { ApolloServerPluginLandingPageLocalDefault } from 'apollo-server-core';
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
+import { GraphQLDateTime } from 'graphql-scalars';
 
 @Injectable()
 export class GqlConfigService implements GqlOptionsFactory {
@@ -18,6 +19,9 @@ export class GqlConfigService implements GqlOptionsFactory {
       autoSchemaFile: true,
       sortSchema: true,
       path,
+      resolvers: {
+        DateTime: GraphQLDateTime
+      },
       subscriptions: {
         'graphql-ws': true,
       },
